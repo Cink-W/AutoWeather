@@ -1,4 +1,4 @@
-name: glados-checkin
+name: autoweather
 #
 on:
   workflow_dispatch: 
@@ -37,10 +37,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9.1
-    - name: requirements
-      run: |
-        python -m pip install --upgrade pip
-        pip3 install -r requirements.txt
+    
     - name: Checkin
       run: |
         python3 ./main.py 
