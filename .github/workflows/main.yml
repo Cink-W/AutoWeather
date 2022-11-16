@@ -37,7 +37,18 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9.1
-    
+     - name: requirements
+      run: |
+        python -m pip install --upgrade pip
+        pip3 install  time
+        pip3 install  hmac
+        pip3 install hashlib
+        pip3 install base64
+        pip3 install urllib.parse
+        pip3 install requests
+        pip3 install json
+        pip3 install bs4
+        
     - name: Checkin
       run: |
         python3 ./main.py 
