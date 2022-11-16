@@ -39,7 +39,8 @@ jobs:
         python-version: 3.9.1
     - name: Install requests
       run: python -m pip install --upgrade pip requests
-      
+    - name: Install bs4
+      run: python -m pip install --upgrade pip bs4
     - name: prep
       run: |
         python -m pip install --upgrade pip
