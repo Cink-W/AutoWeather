@@ -72,7 +72,7 @@ def gen_message(wealist):
     elif( '5' in wealist[0]['win']) :
         mes += '清风' + wealist[0]['win']
     else:
-        mes += '大风起兮云飞扬' + wealist[0]['win']
+        mes += '大风起兮云飞扬,' + wealist[0]['win']
     mes += '\n'    
     if(rain):
         mes += wealist[0]['condition'] +','+'记得带伞\n'
@@ -100,10 +100,10 @@ def send_message(mobile,text,rain):
         json ={
             "at": {
                 "atMobiles":[
-                    mobile
+                   mobile
                 ],
                 "atUserIds":[
-                    ""
+                   ''
                 ],
                 "isAtAll": "false"
             },
@@ -132,4 +132,4 @@ def send_message(mobile,text,rain):
 url = 'http://www.weather.com.cn/weather1d/101210113.shtml'
 wealist = get_content(url)
 mes,rain = gen_message(wealist)
-send_message(18368320156, mes,rain)
+send_message(15021752246, mes,rain)
